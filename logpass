@@ -3,6 +3,8 @@
 
 using namespace std;
 
+setlocale(LC_ALL, "Russian")
+
 int main(){
  while(true){
      int choice,i;
@@ -29,7 +31,7 @@ int main(){
      if(choice == 1){
          int login,password,j;
          do{
-             cout << "Enter you login - ";
+             cout << "Введите свой логин - ";
              cin >> login;
      
          for(j = 0; j < i; j++){
@@ -41,7 +43,7 @@ int main(){
          }while(true);
      
          do{
-             cout << "Enter you password - ";
+             cout << "введите свой пароль - ";
              cin >> password;
              int pass = password,len;
      
@@ -51,7 +53,7 @@ int main(){
      
              if(len > 4 && len < 12) break;
      
-             cout<<"this password is wronng!"<<endl;
+             cout<<"Неверный пароль!"<<endl;
      
          }while(true);
      
@@ -65,23 +67,23 @@ int main(){
          int j;
      
          do{
-             cout<< "Enter you login - ";
+             cout<< "Введите свой логин - ";
              cin>>login;
              
              for( j = 0;j < i; j++){
                  if(login == users[j]) break;
              } if(login == users[j]) break;
      
-             cout<<endl<<"this login is wrong!" << endl;
+             cout<<endl<<"Этот логин неверен!" << endl;
          }while(true);
          
          do{
-             cout<< "Enter you password - ";
+             cout<< "Введите свой пароль - ";
              cin>>password;
              
              if(password == passwords[j]) break;
          
-             cout<<endl<<"this password is wrong!" << endl;
+             cout<<endl<<"Этот пароль неверен!" << endl;
          }while(true);
      
          cout<<"succeful login!"<<endl;
